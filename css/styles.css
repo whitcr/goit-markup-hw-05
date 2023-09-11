@@ -767,6 +767,10 @@ address {
   border-color: var(--primary-brand);
 }
 
+.input:focus + svg {
+  fill: var(--primary-brand);
+}
+
 .input-svg {
   position: absolute;
   left: 16px;

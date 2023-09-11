@@ -596,11 +596,10 @@ address {
 
 .sub-form {
   display: flex;
+  gap: 24px;
 }
 
 .sub-label {
-  display: flex;
-  gap: 24px;
 }
 
 .sub-input {
@@ -781,6 +780,10 @@ address {
 
 .input-svg:focus {
   fill: var(--primary-brand);
+}
+
+.modal-form-container-text {
+  margin-bottom: 16px;
 }
 
 .textarea-comment {

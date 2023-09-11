@@ -221,6 +221,7 @@ img {
   height: 4px;
   background-color: var(--pressed-state);
   border-radius: 2px;
+  width: 100%;
 }
 
 address {
@@ -583,6 +584,73 @@ address {
   fill: var(--light);
 }
 
+.sub-text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-background);
+}
+
+.sub-form {
+  display: flex;
+}
+
+.sub-label {
+  display: flex;
+  gap: 24px;
+}
+
+.sub-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid var(--white-background);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white-background);
+}
+
+.sub-input::placeholder {
+  color: var(--white-background);
+}
+
+.footer-socials {
+  padding-right: 80px;
+}
+
+.sub-button {
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+  cursor: pointer;
+  background-color: var(--primary-brand);
+  border: none;
+  border-radius: 4px;
+}
+
+.sub-button:hover,
+.sub-button:focus {
+  background-color: var(--pressed-state);
+}
+
+.sub-button-svg {
+  margin-left: 16px;
+}
 /* MODAL */
 
 .modal {
@@ -614,6 +682,8 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 72px 24px 24px 24px;
 }
 
 .close-modal-button {
@@ -651,4 +721,143 @@ address {
 .close-modal-button:hover,
 .close-modal-button:focus {
   fill: var(--white-background);
+}
+
+.modal-text {
+  text-align: center;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.modal-form-container {
+  margin-bottom: 8px;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-input-container {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+  border-color: var(--primary-brand);
+}
+
+.input-svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-svg:focus {
+  fill: var(--primary-brand);
+}
+
+.textarea-comment {
+  width: 100%;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea-comment:focus {
+  border-color: var(--primary-brand);
+}
+
+.modal-form-container-checkbox {
+  margin-bottom: 24px;
+}
+
+.input-checkbox {
+}
+
+.label-checkbox {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+}
+
+.privacy-custom {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.input-checkbox:checked + .label-checkbox .privacy-custom {
+  background-color: var(--pressed-state);
+  border: none;
+  fill: var(--light);
+}
+
+.privacy-link {
+  color: var(--primary-brand);
+  text-decoration: underline;
+}
+
+.button-submit {
+  display: block;
+  margin: 0 auto;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+  cursor: pointer;
+  background-color: var(--primary-brand);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: var(--pressed-state);
 }
